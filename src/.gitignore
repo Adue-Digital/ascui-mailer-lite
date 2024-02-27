@@ -1,4 +1,5 @@
 *
 !.gitignore
-!Api
+!Api/
+!Api/MailerLiteApi.php
 !Plugin.php
