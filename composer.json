@@ -1,11 +1,11 @@
 {
-  "name": "adue/wordpress-plugin",
-  "description": "A small plugin that use WordPress Base Plugin package.",
+  "name": "adue/ascui-mailer-lite-integration",
+  "description": "A WP Plugin that integrate ASCUI forms with Mailer Lite service.",
   "type": "library",
   "license": "MIT",
   "autoload": {
     "psr-4": {
-      "Adue\\WordPressPlugin\\": "src/"
+      "Adue\\Ascui\\": "src/"
     }
   },
   "authors": [
@@ -16,12 +16,20 @@
   "minimum-stability": "dev",
   "require": {
     "adue/wordpress-base-plugin": "*",
-    "php-di/php-di": "^7.0"
+    "php-di/php-di": "^7.0",
+    "mailerlite/mailerlite-php": "dev-main",
+    "symfony/http-client": "6.4.x-dev",
+    "nyholm/psr7": "^1.8@dev"
   },
   "repositories": [
     {
       "type": "vcs",
       "url": "https://github.com/Adue-Digital/wordpress-base-plugin"
     }
-  ]
+  ],
+  "config": {
+    "allow-plugins": {
+      "php-http/discovery": true
+    }
+  }
 }

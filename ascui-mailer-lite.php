@@ -1,19 +1,19 @@
 <?php
 /*
-Plugin Name:  WordPress Plugin
-Description:  A small plugin that use WordPress Base Plugin package.
+Plugin Name:  ASCUI Mailer lite Integration
+Description:  A WP Plugin that integrate ASCUI forms with Mailer Lite service.
 Version:      0.0.1
 Author: Marcio Fuentes
 Author URI: https://adue.digital
  */
 
-use Adue\WordPressPlugin\Plugin;
+use Adue\Ascui\Plugin;
 use DI\ContainerBuilder;
 use Noodlehaus\Config;
 
 require 'vendor/autoload.php';
 
-class WordPressPlugin
+class Ascui
 {
 
     public $plugin;
@@ -43,4 +43,4 @@ class WordPressPlugin
 
 }
 
-class_exists(WordPressPlugin::class) && WordPressPlugin::instance();
+class_exists(Ascui::class) && Ascui::instance();
