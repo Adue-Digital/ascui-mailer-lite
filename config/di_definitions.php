@@ -15,4 +15,6 @@ return [
         return new \Adue\WordPressBasePlugin\Helpers\View($c->get('base_view_path'));
     },
 
+
+
 ];

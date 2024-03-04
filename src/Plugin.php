@@ -5,6 +5,7 @@ namespace Adue\Ascui;
 use Adue\Ascui\Api\MailerLiteApi;
 use Adue\WordPressBasePlugin\Base\Loader;
 use Adue\WordPressBasePlugin\BasePlugin;
+use Adue\Ascui\Admin\MailerLiteMenuPage;
 
 class Plugin extends BasePlugin
 {
@@ -13,6 +14,9 @@ class Plugin extends BasePlugin
     {
         $api = $this->getContainer()->get(MailerLiteApi::class);
         $api->init();
+
+        $page = $this->getContainer()->get(MailerLiteMenuPage::class);
+        $page->add();
     }
 
     public function run()
